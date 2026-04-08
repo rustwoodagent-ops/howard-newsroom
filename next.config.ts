@@ -6,7 +6,7 @@ const basePath = isGithubActions ? `/${repoName}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",
-  distDir: "dist",
+  distDir: isGithubActions ? "out" : "dist",
   images: {
     unoptimized: true,
   },
