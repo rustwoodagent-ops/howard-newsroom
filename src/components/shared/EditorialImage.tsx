@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { PlaceholderImage } from "@/components/shared/PlaceholderImage";
+import { getImagePath } from "@/lib/images";
 
 interface EditorialImageProps {
   src?: string;
@@ -47,7 +48,7 @@ export function EditorialImage({
       )}
     >
       <Image
-        src={src}
+        src={getImagePath(src)}
         alt={alt}
         fill
         unoptimized

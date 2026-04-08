@@ -2,6 +2,7 @@ import { Article } from "@/types";
 import { StoryCard } from "./StoryCard";
 import { Container } from "@/components/shared/Container";
 import { EditorialImage } from "@/components/shared/EditorialImage";
+import { getImagePath } from "@/lib/images";
 
 interface HeroFeaturedStoryProps {
   article: Article;
@@ -13,7 +14,7 @@ export function HeroFeaturedStory({ article }: HeroFeaturedStoryProps) {
       <Container>
         <div className="card-shell p-2 md:p-3 mb-6">
           <EditorialImage
-            src="/assets/hero/homepage-hero-generated.jpg"
+            src={getImagePath("assets/hero/homepage-hero-generated.jpg")}
             alt="Howard Newsroom homepage hero visual."
             aspectRatio="wide"
             priority

@@ -4,6 +4,7 @@ import { Section } from "@/components/shared/Section";
 import { EditorialImage } from "@/components/shared/EditorialImage";
 import { ServicesBridge } from "@/components/newsroom/ServicesBridge";
 import { getPageMetadata } from "@/lib/metadata";
+import { getImagePath } from "@/lib/images";
 
 export const metadata: Metadata = getPageMetadata({
   title: "About",
@@ -66,7 +67,7 @@ export default function AboutPage() {
 
             <div className="my-8">
               <EditorialImage
-                src="/assets/howard/howard-portrait-approved.jpg"
+                src={getImagePath("assets/howard/howard-portrait-approved.jpg")}
                 alt="Howard newsroom portrait."
                 aspectRatio="video"
                 className="border border-neutral-200"

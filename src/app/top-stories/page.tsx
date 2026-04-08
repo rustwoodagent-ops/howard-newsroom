@@ -7,6 +7,7 @@ import { ExternalLink } from "lucide-react";
 import { getPageMetadata } from "@/lib/metadata";
 import { formatEditorialDateShort } from "@/lib/content";
 import { EditorialImage } from "@/components/shared/EditorialImage";
+import { getImagePath } from "@/lib/images";
 
 export const metadata: Metadata = getPageMetadata({
   title: "Top Stories",
@@ -33,7 +34,7 @@ export default function TopStoriesPage() {
           </p>
           <div className="mt-8">
             <EditorialImage
-              src="/assets/hero/top-stories-banner.png"
+              src={getImagePath("assets/hero/top-stories-banner.png")}
               alt="Top Stories banner visual for Howard Newsroom."
               aspectRatio="wide"
               className="border border-neutral-200"

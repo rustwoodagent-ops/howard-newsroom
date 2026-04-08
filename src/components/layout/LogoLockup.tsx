@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getImagePath } from "@/lib/images";
 
 interface LogoLockupProps {
   showTagline?: boolean;
@@ -29,7 +30,7 @@ export function LogoLockup({
       {withMark && (
         <span className="relative inline-flex h-9 w-9 items-center justify-center border border-neutral-300 bg-white overflow-hidden">
           <Image
-            src="/assets/logos/howard-logo-approved.jpg"
+            src={getImagePath("assets/logos/howard-logo-approved.jpg")}
             alt="Howard Newsroom logo"
             fill
             unoptimized

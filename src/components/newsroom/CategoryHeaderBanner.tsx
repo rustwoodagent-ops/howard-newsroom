@@ -1,6 +1,7 @@
 import { Category } from "@/types";
 import { Container } from "@/components/shared/Container";
 import { EditorialImage } from "@/components/shared/EditorialImage";
+import { getImagePath } from "@/lib/images";
 
 interface CategoryHeaderBannerProps {
   category: Category;
@@ -24,7 +25,7 @@ export function CategoryHeaderBanner({ category, storyCount }: CategoryHeaderBan
           </div>
           <div className="lg:col-span-5">
             <EditorialImage
-              src={`/assets/categories/${category.slug}.png`}
+              src={getImagePath(`assets/categories/${category.slug}.png`)}
               alt={`${category.name} category visual`}
               aspectRatio="video"
               className="border border-neutral-200"
