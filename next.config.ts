@@ -12,9 +12,13 @@ const nextConfig: NextConfig = {
   },
   basePath,
   assetPrefix: basePath || undefined,
-  turbopack: {
-    root: "/home/rustwood/.openclaw/workspace/howard-newsroom",
-  },
+  ...(isGithubActions
+    ? {}
+    : {
+        turbopack: {
+          root: "/home/rustwood/.openclaw/workspace/howard-newsroom",
+        },
+      }),
 };
 
 export default nextConfig;
