@@ -53,14 +53,14 @@ export function AudioPlayerBlock({
           </div>
 
           {audioUrl ? (
-            <div className="mt-4 rounded-xl overflow-hidden bg-white/40 backdrop-blur-md border border-white/50 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.1)]">
-              <audio className="w-full h-12 [&::-webkit-media-controls-panel]:bg-transparent [&::-webkit-media-controls-current-time-display]:text-neutral-700 [&::-webkit-media-controls-time-remaining-display]:text-neutral-700" controls preload="none">
+            <div className="mt-4 rounded-xl overflow-hidden bg-gradient-to-r from-neutral-100/80 to-neutral-200/60 backdrop-blur-md border border-neutral-300/50 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.08)]">
+              <audio className="w-full h-12 [&::-webkit-media-controls-panel]:bg-transparent [&::-webkit-media-controls-current-time-display]:text-neutral-800 [&::-webkit-media-controls-time-remaining-display]:text-neutral-800" controls preload="none">
                 <source src={getImagePath(audioUrl)} />
                 Your browser does not support the audio element.
               </audio>
             </div>
           ) : (
-            <div className="mt-4 rounded-xl bg-white/40 backdrop-blur-md border border-white/50 px-4 py-3">
+            <div className="mt-4 rounded-xl bg-gradient-to-r from-neutral-100/80 to-neutral-200/60 backdrop-blur-md border border-neutral-300/50 px-4 py-3 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]">
               <p className="text-sm text-neutral-600">Audio is being finalized for this item.</p>
             </div>
           )}
