@@ -1,6 +1,7 @@
 import { Clock, Headphones } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { EditorialImage } from "@/components/shared/EditorialImage";
+import { getImagePath } from "@/lib/images";
 
 interface AudioPlayerBlockProps {
   audioUrl?: string;
@@ -54,7 +55,7 @@ export function AudioPlayerBlock({
           {audioUrl ? (
             <div className="mt-4 rounded-xl overflow-hidden bg-white/40 backdrop-blur-md border border-white/50 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.1)]">
               <audio className="w-full h-12 [&::-webkit-media-controls-panel]:bg-transparent [&::-webkit-media-controls-current-time-display]:text-neutral-700 [&::-webkit-media-controls-time-remaining-display]:text-neutral-700" controls preload="none">
-                <source src={audioUrl} />
+                <source src={getImagePath(audioUrl)} />
                 Your browser does not support the audio element.
               </audio>
             </div>
