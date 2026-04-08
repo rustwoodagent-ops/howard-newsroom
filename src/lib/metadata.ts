@@ -5,7 +5,7 @@ import { toArticlePath } from "@/lib/content";
 const SITE_NAME = "Howard Newsroom";
 const SITE_DESCRIPTION =
   "Signal over noise. Curated intelligence on AI, agents, and automation from Howard and HD Agents.";
-const DEFAULT_SOCIAL_IMAGE = "/assets/social/social-base.png";
+const DEFAULT_SOCIAL_IMAGE = "/assets/social/social-base-approved.jpg";
 
 export const FALLBACK_SITE_URL = "https://rustwoodagent-ops.github.io/howard-newsroom";
 
@@ -54,8 +54,8 @@ export function getBaseMetadata(): Metadata {
       creator: "@hdagents",
     },
     icons: {
-      icon: [{ url: "/assets/logos/howard-logo.jpg", type: "image/jpeg" }],
-      apple: [{ url: "/assets/logos/howard-logo.jpg", type: "image/jpeg" }],
+      icon: [{ url: "/assets/logos/howard-logo-approved.jpg", type: "image/jpeg" }],
+      apple: [{ url: "/assets/logos/howard-logo-approved.jpg", type: "image/jpeg" }],
       shortcut: [{ url: "/favicon.ico" }],
     },
   };

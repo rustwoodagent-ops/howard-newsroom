@@ -66,7 +66,7 @@ export default function AboutPage() {
 
             <div className="my-8">
               <EditorialImage
-                src="/assets/howard/howard-portrait.jpg"
+                src="/assets/howard/howard-portrait-approved.jpg"
                 alt="Howard newsroom portrait."
                 aspectRatio="video"
                 className="border border-neutral-200"

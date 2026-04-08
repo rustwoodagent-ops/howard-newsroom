@@ -13,7 +13,7 @@ export function HeroFeaturedStory({ article }: HeroFeaturedStoryProps) {
       <Container>
         <div className="card-shell p-2 md:p-3 mb-6">
           <EditorialImage
-            src="/assets/hero/homepage-hero.png"
+            src="/assets/hero/homepage-hero-approved.jpg"
             alt="Howard Newsroom homepage hero visual."
             aspectRatio="wide"
             priority
