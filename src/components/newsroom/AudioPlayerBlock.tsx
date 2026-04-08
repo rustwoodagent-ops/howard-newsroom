@@ -1,7 +1,7 @@
 import { Clock, Headphones } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { EditorialImage } from "@/components/shared/EditorialImage";
-import { getImagePath } from "@/lib/images";
+import { CustomAudioPlayer } from "./CustomAudioPlayer";
 
 interface AudioPlayerBlockProps {
   audioUrl?: string;
@@ -53,11 +53,12 @@ export function AudioPlayerBlock({
           </div>
 
           {audioUrl ? (
-            <div className="mt-4 rounded-xl overflow-hidden bg-gradient-to-r from-neutral-100/80 to-neutral-200/60 backdrop-blur-md border border-neutral-300/50 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.08)]">
-              <audio className="w-full h-12 [&::-webkit-media-controls-panel]:bg-transparent [&::-webkit-media-controls-current-time-display]:text-neutral-800 [&::-webkit-media-controls-time-remaining-display]:text-neutral-800" controls preload="none">
-                <source src={getImagePath(audioUrl)} />
-                Your browser does not support the audio element.
-              </audio>
+            <div className="mt-4">
+              <CustomAudioPlayer 
+                audioUrl={audioUrl} 
+                duration={duration} 
+                title="Listen to this report"
+              />
             </div>
           ) : (
             <div className="mt-4 rounded-xl bg-gradient-to-r from-neutral-100/80 to-neutral-200/60 backdrop-blur-md border border-neutral-300/50 px-4 py-3 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]">
